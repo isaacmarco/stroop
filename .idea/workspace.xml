@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f028202f-d872-4b27-a95a-387e2081d349" name="Changes" comment="primer commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug/debug.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/palabra_reconocida.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Item.py" beforeDir="false" afterPath="$PROJECT_DIR$/Item.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asistente.py" beforeDir="false" afterPath="$PROJECT_DIR$/asistente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/correcciones/correccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/correcciones/correccion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/corrector.py" beforeDir="false" afterPath="$PROJECT_DIR$/corrector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palabra.py" beforeDir="false" afterPath="$PROJECT_DIR$/Item.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reconocimiento.py" beforeDir="false" afterPath="$PROJECT_DIR$/reconocimiento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroop.py" beforeDir="false" afterPath="$PROJECT_DIR$/stroop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.asistente.executor": "Run",
     "Python.corrector.executor": "Run",
     "Python.stroop.executor": "Run",
     "Python.tests.executor": "Run",
@@ -69,7 +66,29 @@
       <recent name="C:\Users\Usuario\Documents\stroop" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tests">
+  <component name="RunManager" selected="Python.asistente">
+    <configuration name="asistente" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="stroop" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/asistente.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="corrector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="stroop" />
       <option name="ENV_FILES" value="" />
@@ -138,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.asistente" />
         <item itemvalue="Python.tests" />
         <item itemvalue="Python.stroop" />
         <item itemvalue="Python.corrector" />
@@ -192,7 +212,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769072295826</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="primer commit">
+      <option name="closed" value="true" />
+      <created>1769302666881</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1769302666881</updated>
+    </task>
+    <task id="LOCAL-00006" summary="primer commit">
+      <option name="closed" value="true" />
+      <created>1769302679452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1769302679452</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

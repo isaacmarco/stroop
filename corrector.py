@@ -7,7 +7,7 @@ class Corrector:
        self.items = items
 
     def corregir(self):
-
+        items_correctos = 0
         print('Realizando correccion')
 
         for item in self.items:
@@ -38,5 +38,6 @@ class Corrector:
             # comprobar si es correcta (los colores coinciden)
             if item.respuesta == item.color:
                 item.correccion = str(Correccion.CORRECTA)
+                items_correctos += 1
             else:
                 item.correccion = str(Correccion.INCORRECTA)

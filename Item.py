@@ -12,7 +12,8 @@ class Correccion(Enum):
     SIN_DEFINIR = 2
 
 class Item:
-    def __init__(self, color):
+    def __init__(self, id, color):
+        self.id = id
         self.color = str(color)
         self.correccion = str(Correccion.SIN_DEFINIR)
         self.respuesta = str(Correccion.SIN_DEFINIR)

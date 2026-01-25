@@ -6,7 +6,7 @@ from reconocimiento import ReconocimientoVoz
 
 # crear items de debug
 items = [
-    Item(Colores.ROJO), Item(Colores.VERDE), Item(Colores.AZUL), Item(Colores.VERDE)
+    Item(0, Colores.ROJO), Item(1, Colores.VERDE), Item(2, Colores.AZUL), Item(3, Colores.VERDE)
 ]
 
 # reconocemos el audio de cada item
@@ -26,6 +26,7 @@ corrector.corregir()
 # convertir la lista de items en un diccionario
 diccionario = [
     {
+        'id': item.id,
         'color': item.color,
         'respuesta': item.respuesta,
         'correccion': item.correccion,

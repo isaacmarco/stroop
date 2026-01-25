@@ -7,7 +7,6 @@ import os
 # SETUP
 # =====================
 win = visual.Window(size=(800,600), color="black")
-
 stim = visual.TextStim(win, text="", height=0.15)
 fix = visual.TextStim(win, text="+", height=0.2, color="white")
 
@@ -15,7 +14,6 @@ condiciones = [
     ("ROJO", "red"),
     ("VERDE", "green"),
     ("AZUL", "blue"),
-    ("MARRON", "brown"),
 ]
 
 # generacion balanceada
@@ -77,35 +75,17 @@ for trial, (word, color) in enumerate(items):
     win.flip()
 
     clock.reset()
-    keys = event.waitKeys(
-        maxWait=1.0,
-        keyList=["r", "v", "a", "m"],
-        timeStamped=clock
-    )
+    core.wait(1.0)
 
     # limpiar pantalla
     win.flip()
 
     # ---- FIN GRABACIÓN Y GUARDADO ----
     mic.stop()
-    audio_file = os.path.join(audio_dir, f"trial_{trial:03d}.wav")
+    audio_file = os.path.join(audio_dir, f'item{trial}.wav')
     recording = mic.getRecording()
     recording.save(audio_file)
 
-    # Procesar respuesta
-    if keys:
-        key, rt = keys[0]
-    else:
-        key, rt = None, None
-
-    correct = (
-        (color == "red" and key == "r") or
-        (color == "green" and key == "v") or
-        (color == "blue" and key == "a") or
-        (color == "brown" and key == "m")
-    )
-
-    results.append((trial, word, color, key, rt, correct, audio_file))
 
     core.wait(0.5)
 
@@ -117,6 +97,3 @@ end.draw()
 win.flip()
 core.wait(2)
 win.close()
-
-for r in results:
-    print(r)

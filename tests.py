@@ -1,0 +1,38 @@
+import json
+
+from Item import Item, Colores
+from corrector import Corrector
+from reconocimiento import ReconocimientoVoz
+
+# crear items de debug
+items = [
+    Item(Colores.ROJO), Item(Colores.VERDE), Item(Colores.AZUL), Item(Colores.VERDE)
+]
+
+# reconocemos el audio de cada item
+reconocimiento_voz = ReconocimientoVoz("c:/vosk/vosk-model-small-es-0.42")
+for i, item in enumerate(items):
+    # abrimos el wav
+    fichero = f'debug/item{i}.wav'
+    print(f'Procesando item {fichero}')
+    # obtenemos las palabras reconocidas en ese item
+    palabras = reconocimiento_voz.reconocer(fichero)
+    item.palabras_reconocidas = palabras
+
+
+# corregimos los items
+corrector = Corrector(items)
+corrector.corregir()
+# convertir la lista de items en un diccionario
+diccionario = [
+    {
+        'color': item.color,
+        'respuesta': item.respuesta,
+        'correccion': item.correccion,
+        'palabras': [p.to_dict() for p in item.palabras_reconocidas],
+    } for item in items
+]
+
+json = json.dumps({'correccion' : diccionario}, indent=2)
+with open('correcciones/correccion.json', 'w', encoding='utf-8') as f:
+    f.write(json)

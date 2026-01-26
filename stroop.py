@@ -14,6 +14,7 @@ condiciones = [
     ("ROJO", "red"),
     ("VERDE", "green"),
     ("AZUL", "blue"),
+    ("AMARILLO", "yellow")
 ]
 
 # generacion balanceada
@@ -25,9 +26,15 @@ for word, color in condiciones:
             items.append((word, other_color))
 
 # generacion de prueba
-items = [('ROJO', 'red'), ('AZUL', 'blue'), ('VERDE', 'green')]
+items = [
+    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+]
 
-random.shuffle(items)
+# todavia no randomizamos los items
+# random.shuffle(items)
 
 # Carpeta para audios
 audio_dir = "recordings"

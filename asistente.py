@@ -5,8 +5,6 @@ import tkinter as tk
 from tkinter import ttk
 import os
 import threading
-import wave
-#import simpleaudio as sa
 import sounddevice as sd
 import soundfile as sf
 

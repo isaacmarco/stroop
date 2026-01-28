@@ -2,6 +2,9 @@ from psychopy import visual, core, event
 from psychopy.sound import microphone
 import random
 import os
+import soundfile as sf
+import numpy as np
+from scipy.signal import resample_poly
 
 # =====================
 # SETUP
@@ -27,10 +30,10 @@ for word, color in condiciones:
 
 # generacion de prueba
 items = [
-    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
-    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
-    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
-    ('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    ('ROJO', 'red'), ('VERDE', 'green') #, ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    #('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    #('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
+    #('ROJO', 'red'), ('VERDE', 'green'), ('AZUL', 'blue'), ('AMARILLO', 'yellow'),
 ]
 
 # todavia no randomizamos los items
@@ -42,17 +45,18 @@ os.makedirs(audio_dir, exist_ok=True)
 
 # Micrófono
 mic = microphone.Microphone()
+'''
+    device=None,      # dispositivo por defecto
+    channels=1,       # MONO
+    sampleRateHz=16000
+)'''
 
 # =====================
 # INSTRUCCIONES
 # =====================
 instr = visual.TextStim(
     win,
-    text=(
-        "Di el COLOR de la palabra.\n"
-        "r=rojo, v=verde, a=azul, m=marrón\n\n"
-        "Pulsa una tecla para empezar."
-    )
+    text=("Di el COLOR de la palabra. Pulsa una tecla para comenzar.")
 )
 instr.draw()
 win.flip()
@@ -68,12 +72,14 @@ for trial, (word, color) in enumerate(items):
 
     # ---- INICIO GRABACIÓN ----
     # duración total: fijación (0.5) + estímulo (1.0)
-    mic.start()
+
 
     # Fijación (0.5 s)
     fix.draw()
     win.flip()
     core.wait(0.5)
+
+    mic.start()
 
     # Estímulo Stroop (1 s)
     stim.text = word
@@ -90,9 +96,14 @@ for trial, (word, color) in enumerate(items):
     # ---- FIN GRABACIÓN Y GUARDADO ----
     mic.stop()
     audio_file = os.path.join(audio_dir, f'item{trial}.wav')
-    recording = mic.getRecording()
-    recording.save(audio_file)
+    audio = mic.getRecording().asMono()
 
+    data = audio.samples
+    orig_sr = audio.sampleRateHz  # probablemente 48000
+    target_sr = 16000
+    if orig_sr != target_sr:
+        data = resample_poly(data, target_sr, orig_sr)
+    sf.write(audio_file, data, target_sr, subtype="PCM_16")
 
     core.wait(0.5)
 

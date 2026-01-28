@@ -1,17 +1,20 @@
 # pip install simpleaudio
+# o pip install sounddevice
 import json
 import tkinter as tk
 from tkinter import ttk
 import os
 import threading
 import wave
-import simpleaudio as sa
+#import simpleaudio as sa
+import sounddevice as sd
+import soundfile as sf
 
 # =====================
 # CONFIG
 # =====================
 JSON_FILE = "correcciones/correccion.json"
-RECORDINGS_DIR = "debug"
+RECORDINGS_DIR = "recordings"
 
 COLOR_MAP = {
     "Correccion.CORRECTA": "green",
@@ -28,11 +31,15 @@ def play_wav(path):
         return
 
     def _play():
+        data, sr = sf.read(path)
+        sd.play(data, sr)
+        sd.wait()
+        '''
         with wave.open(path, 'rb') as wf:
             audio = sa.WaveObject.from_wave_read(wf)
             play = audio.play()
             play.wait_done()
-
+        '''
     threading.Thread(target=_play, daemon=True).start()
 
 # =====================

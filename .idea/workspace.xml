@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f028202f-d872-4b27-a95a-387e2081d349" name="Changes" comment="primer commit">
-      <change afterPath="$PROJECT_DIR$/debug/errores.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stroop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stroop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asistente.py" beforeDir="false" afterPath="$PROJECT_DIR$/asistente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/correcciones/correccion.json" beforeDir="false" afterPath="$PROJECT_DIR$/correcciones/correccion.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stroop.py" beforeDir="false" afterPath="$PROJECT_DIR$/stroop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
@@ -55,7 +58,8 @@
     &quot;Python.stroop.executor&quot;: &quot;Run&quot;,
     &quot;Python.tests.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -165,7 +169,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>

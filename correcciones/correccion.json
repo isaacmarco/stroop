@@ -8,67 +8,14 @@
       "palabras": [
         {
           "palabra": "rojo",
-          "inicio": 0.06,
-          "fin": 0.45
+          "inicio": 0.48,
+          "fin": 0.72
         }
       ]
     },
     {
       "id": 1,
       "color": "Colores.VERDE",
-      "respuesta": "Colores.VERDE",
-      "correccion": "Correccion.CORRECTA",
-      "palabras": [
-        {
-          "palabra": "verde",
-          "inicio": 0.0,
-          "fin": 0.6
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "color": "Colores.AZUL",
-      "respuesta": "Colores.AMARILLO",
-      "correccion": "Correccion.INCORRECTA",
-      "palabras": [
-        {
-          "palabra": "amarillo",
-          "inicio": 0.0,
-          "fin": 0.63
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "color": "Colores.AMARILLO",
-      "respuesta": "Correccion.SIN_DEFINIR",
-      "correccion": "Correccion.SIN_DEFINIR",
-      "palabras": []
-    },
-    {
-      "id": 4,
-      "color": "Colores.ROJO",
-      "respuesta": "Colores.AZUL",
-      "correccion": "Correccion.INCORRECTA",
-      "palabras": [
-        {
-          "palabra": "azul",
-          "inicio": 0.0,
-          "fin": 0.51
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "color": "Colores.VERDE",
-      "respuesta": "Correccion.SIN_DEFINIR",
-      "correccion": "Correccion.SIN_DEFINIR",
-      "palabras": []
-    },
-    {
-      "id": 6,
-      "color": "Colores.AZUL",
       "respuesta": "Correccion.SIN_DEFINIR",
       "correccion": "Correccion.SIN_DEFINIR",
       "palabras": []
